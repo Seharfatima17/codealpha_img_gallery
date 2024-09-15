@@ -1,0 +1,67 @@
+
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: rgb(18, 17, 17);
+}
+
+/* Gallery Container */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    width: 80%;
+    padding-left: 200px;
+}
+
+/* Image Container */
+.image-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+/* Gallery Images */
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.7s ease;
+}
+
+/* Overlay Text */
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+    color: white;
+    text-align: center;
+    padding: 7px;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    font-size: 1.1rem;
+    width: 100%;
+}
+
+/* Hover Effects */
+.image-container:hover img {
+    transform: scale(1.1);
+}
+
+.image-container:hover .overlay {
+    opacity: 1; /* Show the text */
+}
+.title{
+    color: rgb(212, 206, 206);
+    text-align: center;
+    padding: 20px;
+    padding-left: 30px;
+    font-size: 290%;
+    font-weight: 300;
+    font-family:Times;
+}
